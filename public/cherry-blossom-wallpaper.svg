@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1600" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8efe0"/>
+      <stop offset="45%" stop-color="#e8d2b5"/>
+      <stop offset="100%" stop-color="#d8c09d"/>
+    </linearGradient>
+    <radialGradient id="haze" cx="50%" cy="34%" r="62%">
+      <stop offset="0%" stop-color="#fffdf9" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#fffdf9" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="2400" height="1600" fill="url(#sky)"/>
+  <path d="M0 990 C260 860 500 920 760 880 C1040 835 1270 760 1540 790 C1790 818 2080 930 2400 870 L2400 1600 L0 1600 Z" fill="#84b05e" opacity="0.44"/>
+  <path d="M0 1120 C330 1025 620 1110 910 1055 C1190 1003 1480 965 1770 1000 C2000 1028 2200 1110 2400 1060 L2400 1600 L0 1600 Z" fill="#6f9749" opacity="0.42"/>
+  <path d="M1650 880 C1730 835 1820 840 1885 900 C1932 943 1970 979 2012 996 C1972 1008 1930 1030 1886 1060 C1826 1100 1760 1128 1688 1128 C1610 1128 1542 1094 1475 1053 C1523 1018 1566 972 1604 936 C1627 915 1642 898 1650 880 Z" fill="#c8381b" opacity="0.95"/>
+  <path d="M1620 900 C1678 862 1745 848 1810 874 C1864 897 1920 949 1954 993 C1936 996 1910 1008 1874 1034 C1821 1071 1760 1098 1692 1098 C1627 1098 1567 1075 1518 1044 C1560 1008 1595 972 1620 900 Z" fill="#ea5b32" opacity="0.66"/>
+  <path d="M1662 882 C1707 792 1764 740 1842 704" stroke="#9c2d16" stroke-width="16" stroke-linecap="round" opacity="0.75" fill="none"/>
+  <path d="M1602 941 C1554 874 1503 836 1430 804" stroke="#9c2d16" stroke-width="13" stroke-linecap="round" opacity="0.68" fill="none"/>
+  <circle cx="1708" cy="804" r="28" fill="#f7bfd0" opacity="0.76"/>
+  <circle cx="1764" cy="832" r="20" fill="#f8c6d8" opacity="0.73"/>
+  <circle cx="1820" cy="804" r="25" fill="#f3b7cf" opacity="0.74"/>
+  <circle cx="1878" cy="842" r="20" fill="#f0afcb" opacity="0.72"/>
+  <circle cx="1930" cy="830" r="22" fill="#f7bfd8" opacity="0.74"/>
+  <circle cx="1732" cy="934" r="24" fill="#f7bfd7" opacity="0.73"/>
+  <circle cx="1800" cy="950" r="19" fill="#f4b6cf" opacity="0.72"/>
+  <circle cx="1885" cy="944" r="22" fill="#f1b0ca" opacity="0.72"/>
+  <circle cx="1970" cy="928" r="18" fill="#f4b9d0" opacity="0.72"/>
+  <ellipse cx="1180" cy="1370" rx="620" ry="120" fill="#234229" opacity="0.13"/>
+  <rect width="2400" height="1600" fill="url(#haze)"/>
+</svg>

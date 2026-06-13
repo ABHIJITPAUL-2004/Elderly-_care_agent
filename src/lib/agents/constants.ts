@@ -1,0 +1,3 @@
+export const DEFAULT_AGENT_TEMPERATURE = 0.2;
+export const DEFAULT_AGENT_RETRIES = 2;
+export const MAX_CONTEXT_RECORDS = 5;
