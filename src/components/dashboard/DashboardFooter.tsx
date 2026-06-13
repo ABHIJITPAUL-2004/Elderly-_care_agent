@@ -5,7 +5,7 @@ import { useLanguage } from "@/lib/language-context";
 export function DashboardFooter() {
   const { t } = useLanguage();
   return (
-    <footer className="border-t border-stone-200 bg-white">
+    <footer className="border-t border-stone-200 bg-[#f8eedf]/88 backdrop-blur-[1px]">
       <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-6 sm:px-6">
         <div className="flex items-center gap-3">
           <div className="flex h-7 w-7 items-center justify-center rounded-lg bg-indigo-600">

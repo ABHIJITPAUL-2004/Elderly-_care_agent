@@ -16,7 +16,7 @@ export function AnalyticsSection({ snapshot, HealthAnalyticsChart }: Props) {
   const { t } = useLanguage();
 
   return (
-    <section className="border-b border-stone-200 bg-white">
+    <section className="border-b border-stone-200 bg-[#f7ebdc]/86 backdrop-blur-[1px]">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6">
         <p className="text-xs font-semibold uppercase tracking-widest text-indigo-600">
           {t.analytics.description}

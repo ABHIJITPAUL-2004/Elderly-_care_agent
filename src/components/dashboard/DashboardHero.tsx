@@ -48,7 +48,7 @@ export function DashboardHero({ snapshot }: Props) {
   ];
 
   return (
-    <section className="border-b border-stone-200 bg-white">
+    <section className="border-b border-stone-200 bg-[#f8eedf]/86 backdrop-blur-[1px]">
       <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:py-14">
         {/* Eyebrow */}
         <p className="text-xs font-semibold uppercase tracking-widest text-indigo-600">
@@ -68,7 +68,7 @@ export function DashboardHero({ snapshot }: Props) {
           {stats.map((s) => (
             <div
               key={s.label}
-              className="rounded-2xl border border-stone-200 bg-stone-50 p-5 shadow-sm"
+              className="rounded-2xl border border-[#ead7ca] bg-[#fff8ef]/82 p-5 shadow-sm backdrop-blur-[1px]"
             >
               <p className="text-xs font-medium uppercase tracking-widest text-stone-400">
                 {s.label}

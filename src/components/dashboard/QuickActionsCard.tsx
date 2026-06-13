@@ -75,11 +75,11 @@ export function QuickActionsCard({ currentPatientId }: Props) {
   };
 
   return (
-    <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+    <div className="rounded-2xl border border-[#ead7ca] bg-[#fff8ef]/88 p-6 shadow-sm backdrop-blur-[1px]">
       <div className="flex items-start justify-between gap-4">
         <div>
           <h3 className="text-lg font-semibold text-stone-900 flex items-center gap-2">
-            <span className="flex h-6 w-6 items-center justify-center rounded-lg bg-indigo-600 text-[10px] font-bold text-white uppercase">
+            <span className="flex h-6 w-6 items-center justify-center rounded-lg bg-[#d8a99a] text-[10px] font-bold text-white uppercase">
               Demo
             </span>
             {t.title}
@@ -99,7 +99,7 @@ export function QuickActionsCard({ currentPatientId }: Props) {
           <select
             value={currentScenario?.patientId ?? ""}
             onChange={(e) => handleScenarioChange(e.target.value)}
-            className="w-full rounded-xl border border-stone-200 bg-stone-50 px-3.5 py-2 text-sm text-stone-800 focus:border-indigo-500 focus:outline-none"
+            className="w-full rounded-xl border border-[#e6d0c4] bg-[#fffaf3] px-3.5 py-2 text-sm text-stone-800 focus:border-[#d8a99a] focus:outline-none"
           >
             <option value="" disabled>
               {t.selectPlaceholder}
@@ -117,7 +117,7 @@ export function QuickActionsCard({ currentPatientId }: Props) {
           <button
             onClick={handleRunPipeline}
             disabled={isPending}
-            className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-indigo-500 disabled:opacity-60 cursor-pointer"
+            className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-[#e3b7aa] px-4 py-2.5 text-sm font-semibold text-stone-900 shadow-sm transition-colors hover:bg-[#d9aa9b] disabled:opacity-60 cursor-pointer"
           >
             {isPending ? (
               <>
@@ -142,7 +142,7 @@ export function QuickActionsCard({ currentPatientId }: Props) {
         <div className="flex flex-col justify-end">
           <Link
             href="/analyze"
-            className="w-full inline-flex items-center justify-center gap-2 rounded-xl border border-stone-200 bg-white px-4 py-2.5 text-sm font-semibold text-stone-600 shadow-sm transition-colors hover:bg-stone-50"
+            className="w-full inline-flex items-center justify-center gap-2 rounded-xl border border-[#e6d0c4] bg-[#fffaf3] px-4 py-2.5 text-sm font-semibold text-stone-700 shadow-sm transition-colors hover:bg-[#f4e3da]"
           >
             <svg className="h-4 w-4 text-stone-500" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -158,7 +158,7 @@ export function QuickActionsCard({ currentPatientId }: Props) {
             ? "border-emerald-200 bg-emerald-50 text-emerald-800" 
             : statusMessage.type === "error" 
             ? "border-rose-200 bg-rose-50 text-rose-800" 
-            : "border-indigo-100 bg-indigo-50 text-indigo-800"
+            : "border-[#ead7ca] bg-[#f9eee4] text-stone-700"
         }`}>
           {statusMessage.type === "info" && (
             <svg className="h-5 w-5 animate-spin text-indigo-600 shrink-0" fill="none" viewBox="0 0 24 24">
@@ -177,7 +177,7 @@ export function QuickActionsCard({ currentPatientId }: Props) {
       )}
 
       {currentScenario && (
-        <div className="mt-4 rounded-xl border border-stone-100 bg-stone-50/50 p-4">
+        <div className="mt-4 rounded-xl border border-[#ead7ca] bg-[#f9eee4]/86 p-4">
           <p className="text-xs font-semibold uppercase tracking-widest text-stone-400">Scenario Focus</p>
           <p className="mt-1 text-sm font-semibold text-stone-800">{currentScenario.description}</p>
           <p className="mt-1 text-xs text-stone-500 leading-relaxed">{currentScenario.riskDetails}</p>

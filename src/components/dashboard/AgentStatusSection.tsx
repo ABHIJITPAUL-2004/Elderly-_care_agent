@@ -68,7 +68,7 @@ export function AgentStatusSection({ snapshot, activityFeed }: Props) {
   ];
 
   return (
-    <section className="border-b border-stone-200 bg-stone-50">
+    <section className="border-b border-stone-200 bg-[#f7ebdc]/88 backdrop-blur-[1px]">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6">
         <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
           {/* Agent cards */}
@@ -81,7 +81,7 @@ export function AgentStatusSection({ snapshot, activityFeed }: Props) {
               {agents.map((agent) => {
                 const style = TONE_STYLES[agent.tone];
                 return (
-                  <div key={agent.key} className="rounded-2xl border border-stone-200 bg-white p-5 shadow-sm">
+                  <div key={agent.key} className="rounded-2xl border border-[#ead7ca] bg-[#fff8ef]/88 p-5 shadow-sm backdrop-blur-[1px]">
                     <div className="flex items-center justify-between">
                       <span className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-xs font-medium ${style.badge}`}>
                         <span className={`h-1.5 w-1.5 rounded-full ${style.dot}`} />
@@ -115,7 +115,7 @@ export function AgentStatusSection({ snapshot, activityFeed }: Props) {
                 const style = TONE_STYLES[item.tone];
                 const toneLabel = t.activityFeed.toneLabels[item.tone as keyof typeof t.activityFeed.toneLabels] ?? item.tone;
                 return (
-                  <div key={item.id} className="rounded-2xl border border-stone-200 bg-white p-4 shadow-sm">
+                  <div key={item.id} className="rounded-2xl border border-[#ead7ca] bg-[#fff8ef]/88 p-4 shadow-sm backdrop-blur-[1px]">
                     <div className="flex items-start justify-between gap-3">
                       <div className="min-w-0">
                         <p className="text-sm font-medium text-stone-800">{item.title}</p>

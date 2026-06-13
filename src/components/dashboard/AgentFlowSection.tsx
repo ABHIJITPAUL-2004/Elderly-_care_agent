@@ -32,7 +32,7 @@ export function AgentFlowSection() {
   const agents: AgentKey[] = ["health", "safety", "care", "manager"];
 
   return (
-    <section className="border-b border-stone-200 bg-white">
+    <section className="border-b border-stone-200 bg-[#f7ebdc]/86 backdrop-blur-[1px]">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6">
         <p className="text-xs font-semibold uppercase tracking-widest text-indigo-600">
           {t.agentFlow.description}
@@ -52,9 +52,9 @@ export function AgentFlowSection() {
                 <Arrow />
                 {/* Agent card */}
                 <div
-                  className={`w-44 rounded-2xl border ${colors.ring} ring-1 ${colors.bg} px-4 py-5 text-center shadow-sm`}
+                  className={`w-44 rounded-2xl border ${colors.ring} ring-1 bg-[#fff7ef]/84 px-4 py-5 text-center shadow-sm backdrop-blur-[1px]`}
                 >
-                  <div className={`mx-auto flex h-10 w-10 items-center justify-center rounded-xl ${colors.bg} shadow-inner ring-1 ${colors.ring}`}>
+                  <div className={`mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-[#f6e7dc] shadow-inner ring-1 ${colors.ring}`}>
                     <svg className={`h-5 w-5 ${colors.icon}`} fill="none" stroke="currentColor" strokeWidth={1.7} viewBox="0 0 24 24" aria-hidden="true">
                       {ICONS[key]}
                     </svg>
@@ -98,7 +98,7 @@ function FlowNode({ label, isSource, isDestination }: { label: string; isSource?
   const color = isSource
     ? "bg-stone-100 border-stone-300 text-stone-600"
     : isDestination
-      ? "bg-indigo-600 border-indigo-600 text-white"
+      ? "bg-[#d8a99a] border-[#d8a99a] text-white"
       : "";
   return (
     <div className={`flex w-32 items-center justify-center rounded-2xl border-2 px-3 py-5 text-center text-sm font-semibold shadow-sm ${color}`}>

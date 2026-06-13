@@ -30,7 +30,7 @@ export function PatientAndLiveSection({ snapshot, LiveAiRefresh }: Props) {
   const riskChip = RISK_CHIP[snapshot.manager.overall_risk_level] ?? RISK_CHIP.LOW;
 
   return (
-    <section className="border-b border-stone-200 bg-stone-50">
+    <section className="border-b border-stone-200 bg-[#f7ebdc]/88 backdrop-blur-[1px]">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6">
         <div className="grid gap-8 lg:grid-cols-2">
 
@@ -41,7 +41,7 @@ export function PatientAndLiveSection({ snapshot, LiveAiRefresh }: Props) {
             </p>
             <h2 className="mt-2 text-2xl font-semibold text-stone-900">{t.patientDetails.title}</h2>
 
-            <div className="mt-6 rounded-2xl border border-stone-200 bg-white p-6 shadow-sm space-y-6">
+            <div className="mt-6 rounded-2xl border border-[#ead7ca] bg-[#fff8ef]/88 p-6 shadow-sm space-y-6 backdrop-blur-[1px]">
               {/* Name + status */}
               <div className="flex items-start justify-between gap-4">
                 <div>
@@ -134,7 +134,7 @@ export function PatientAndLiveSection({ snapshot, LiveAiRefresh }: Props) {
               {t.liveRefresh.description}
             </p>
             <h2 className="mt-2 text-2xl font-semibold text-stone-900">{t.liveRefresh.title}</h2>
-            <div className="mt-6 rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+            <div className="mt-6 rounded-2xl border border-[#ead7ca] bg-[#fff8ef]/88 p-6 shadow-sm backdrop-blur-[1px]">
               <LiveAiRefresh
                 patientId={snapshot.patient.id}
                 initialSummary={snapshot.manager.executive_summary}
@@ -145,9 +145,9 @@ export function PatientAndLiveSection({ snapshot, LiveAiRefresh }: Props) {
             </div>
 
             {/* Manager summary panel */}
-            <div className="mt-4 rounded-2xl border border-indigo-100 bg-indigo-50 p-6">
-              <p className="text-xs font-semibold uppercase tracking-widest text-indigo-400">{t.managerCard.description}</p>
-              <p className="mt-2 text-base font-semibold text-indigo-900 leading-6">
+            <div className="mt-4 rounded-2xl border border-[#ead7ca] bg-[#f9eee4]/92 p-6 backdrop-blur-[1px]">
+              <p className="text-xs font-semibold uppercase tracking-widest text-stone-500">{t.managerCard.description}</p>
+              <p className="mt-2 text-base font-semibold text-stone-800 leading-6">
                 {snapshot.manager.executive_summary}
               </p>
               <div className="mt-4 grid grid-cols-3 gap-2 text-sm">
@@ -156,9 +156,9 @@ export function PatientAndLiveSection({ snapshot, LiveAiRefresh }: Props) {
                   { label: t.managerCard.safety, value: snapshot.safety.incident_detected ? snapshot.safety.incident_type : t.managerCard.noActiveIncident },
                   { label: t.managerCard.care, value: snapshot.care.priority_level },
                 ].map((item) => (
-                  <div key={item.label} className="rounded-xl bg-white/70 px-3 py-2">
-                    <p className="text-xs text-indigo-400">{item.label}</p>
-                    <p className="mt-0.5 text-sm font-semibold text-indigo-800 truncate">{item.value}</p>
+                  <div key={item.label} className="rounded-xl bg-[#fffaf2]/80 px-3 py-2 border border-[#ead7ca]">
+                    <p className="text-xs text-stone-500">{item.label}</p>
+                    <p className="mt-0.5 text-sm font-semibold text-stone-800 truncate">{item.value}</p>
                   </div>
                 ))}
               </div>
