@@ -2,7 +2,7 @@ import "server-only";
 
 import type { ZodType } from "zod";
 
-import { chatWithOllama, OLLAMA_MODEL } from "@/lib/services/ollama";
+import { chatWithOllama, OLLAMA_MODEL, type OllamaChatMessage } from "@/lib/services/ollama";
 import { AppError } from "@/lib/utils/errors";
 import { createLogger } from "@/lib/utils/logger";
 import { DEFAULT_AGENT_RETRIES, DEFAULT_AGENT_TEMPERATURE } from "./constants";
@@ -48,7 +48,7 @@ export async function executeStructuredAgent<TInput, TOutput>(
 
   for (let attempt = 1; attempt <= attempts; attempt += 1) {
     try {
-      const messages = [
+      const messages: OllamaChatMessage[] = [
         { role: "system", content: options.systemPrompt },
         { role: "user", content: options.buildUserMessage(input) },
       ];
